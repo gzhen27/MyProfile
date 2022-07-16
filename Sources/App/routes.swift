@@ -1,7 +1,8 @@
 import Vapor
+import Leaf
 
 func routes(_ app: Application) throws {
     app.get { req in
-        return "It works!"
+        return req.view.render("index")
     }
 }
